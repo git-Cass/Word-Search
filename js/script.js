@@ -1,22 +1,19 @@
-function findIndices() {
-    const target = document.getElementById('target').value;
-    const words = ["I", "TWO", "FORTY", "THREE", 'JEN', "TWO", "tWo", "Two"];
-    const indices = [];
+function findIndex() {
+    let target = document.getElementById('target').value;
+    let words = ["I", "TWO", "FORTY", "THREE", 'JEN', "TWO", "tWo", "Two"];
+    let index = [];
 
+    
     for (let i = 0; i < words.length; i++) {
         if (words[i].includes(target)) {
-            indices.push(i);
+            index.push(i);
         }
     }
 
-    displayResult(indices);
-}
-
-function displayResult(indices) {
-    const resultDiv = document.getElementById('result');
-    if (indices.length === 0) {
+    let resultDiv = document.getElementById('result');
+    if (index.length === 0) {
         resultDiv.innerHTML = 'Target word not found in the list.';
     } else {
-        resultDiv.innerHTML = `Indices: ${indices.join(', ')}`;
+        resultDiv.innerHTML = `INDICES: ${index.join(', ')}`;
     }
 }
